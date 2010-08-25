@@ -1,0 +1,28 @@
+[Mon Apr 27 09:44:31 2009] [error] [client 127.0.0.1] mod_wsgi (pid=2732): Exception occurred within WSGI script '/var/wordisms/apache/wordisms.wsgi'.
+[Mon Apr 27 09:44:31 2009] [error] [client 127.0.0.1] mod_wsgi (pid=2732): Exception occurred within WSGI script '/var/wordisms/apache/wordisms.wsgi'.
+[Mon Apr 27 09:44:31 2009] [error] [client 127.0.0.1] mod_wsgi (pid=2732): Exception occurred within WSGI script '/var/wordisms/apache/wordisms.wsgi'.
+[Mon Apr 27 09:44:31 2009] [error] [client 127.0.0.1] Traceback (most recent call last):
+[Mon Apr 27 09:44:31 2009] [error] [client 127.0.0.1] Traceback (most recent call last):
+[Mon Apr 27 09:44:31 2009] [error] [client 127.0.0.1] Traceback (most recent call last):
+[Mon Apr 27 09:44:31 2009] [error] [client 127.0.0.1]   File "/usr/lib/python2.5/site-packages/django/core/handlers/wsgi.py", line 231, in __call__
+[Mon Apr 27 09:44:31 2009] [error] [client 127.0.0.1]   File "/usr/lib/python2.5/site-packages/django/core/handlers/wsgi.py", line 231, in __call__
+[Mon Apr 27 09:44:31 2009] [error] [client 127.0.0.1]   File "/usr/lib/python2.5/site-packages/django/core/handlers/wsgi.py", line 231, in __call__
+[Mon Apr 27 09:44:31 2009] [error] [client 127.0.0.1]     set_script_prefix(base.get_script_name(environ))
+[Mon Apr 27 09:44:31 2009] [error] [client 127.0.0.1]   File "/usr/lib/python2.5/site-packages/django/core/handlers/base.py", line 199, in get_script_name
+[Mon Apr 27 09:44:31 2009] [error] [client 127.0.0.1]     set_script_prefix(base.get_script_name(environ))
+[Mon Apr 27 09:44:31 2009] [error] [client 127.0.0.1]   File "/usr/lib/python2.5/site-packages/django/core/handlers/base.py", line 199, in get_script_name
+[Mon Apr 27 09:44:31 2009] [error] [client 127.0.0.1]     set_script_prefix(base.get_script_name(environ))
+[Mon Apr 27 09:44:31 2009] [error] [client 127.0.0.1]   File "/usr/lib/python2.5/site-packages/django/core/handlers/base.py", line 199, in get_script_name
+[Mon Apr 27 09:44:31 2009] [error] [client 127.0.0.1]     return force_unicode(environ.get('SCRIPT_NAME', u''))
+[Mon Apr 27 09:44:31 2009] [error] [client 127.0.0.1]   File "/usr/lib/python2.5/site-packages/django/utils/encoding.py", line 68, in force_unicode
+[Mon Apr 27 09:44:31 2009] [error] [client 127.0.0.1]     return force_unicode(environ.get('SCRIPT_NAME', u''))
+[Mon Apr 27 09:44:31 2009] [error] [client 127.0.0.1]   File "/usr/lib/python2.5/site-packages/django/utils/encoding.py", line 68, in force_unicode
+[Mon Apr 27 09:44:31 2009] [error] [client 127.0.0.1]     return force_unicode(environ.get('SCRIPT_NAME', u''))
+[Mon Apr 27 09:44:31 2009] [error] [client 127.0.0.1]   File "/usr/lib/python2.5/site-packages/django/utils/encoding.py", line 68, in force_unicode
+[Mon Apr 27 09:44:31 2009] [error] [client 127.0.0.1]     s = s.decode(encoding, errors)
+[Mon Apr 27 09:44:31 2009] [error] [client 127.0.0.1]     s = s.decode(encoding, errors)
+[Mon Apr 27 09:44:31 2009] [error] [client 127.0.0.1] LookupError: no codec search functions registered: can't find encoding
+[Mon Apr 27 09:44:31 2009] [error] [client 127.0.0.1] LookupError: no codec search functions registered: can't find encoding
+[Mon Apr 27 09:44:31 2009] [error] [client 127.0.0.1]     s = s.decode(encoding, errors)
+[Mon Apr 27 09:44:31 2009] [error] [client 127.0.0.1] LookupError: no codec search functions registered: can't find encoding
+[Tue Apr 28 18:21:08 2009] [error] [client 121.174.154.90] client sent HTTP/1.1 request without hostname (see RFC2616 section 14.23): /w00tw00t.at.ISC.SANS.DFind:)

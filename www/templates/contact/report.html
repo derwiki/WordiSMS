@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<table style="margin-left: auto; margin-right: auto; width: 80%">
+    <tr style="font-weight: bold">
+        <td>Response</td>
+        <td>Definition</td>
+        <td>Word</td>
+        <td>Timestamp</td>
+    </tr>
+    {% for response in wrong_answers %}
+    <tr>
+        <td>{{ response.attempt }}</td>
+        <td>{{ response.word }}</td>
+        <td>{{ response.definition }}</td>
+        <td>{{ response.timestamp }}</td>
+    </tr> 
+    {% endfor %}
+</table>
+
+
+{% endblock %}

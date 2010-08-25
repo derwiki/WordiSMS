@@ -1,0 +1,5 @@
+<table>
+    {% for user in users %}
+    <tr><td><a href="/user/{{ user.id }}/stats">{{ user.phonenumber }}</a></td></tr>
+    {% endfor %}
+</table>

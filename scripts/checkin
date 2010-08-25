@@ -1,0 +1,5 @@
+#!/bin/sh
+
+/var/wordisms/scripts/testEmail /var/wordisms/email/signup.email
+/var/wordisms/scripts/testEmail /var/wordisms/email/stats.email
+/var/wordisms/scripts/testEmail /var/wordisms/email/quit.email

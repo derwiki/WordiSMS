@@ -1,0 +1,50 @@
+From derewecki@gmail.com  Sun Nov 16 22:32:04 2008
+Return-Path: <derewecki@gmail.com>
+X-Original-To: study@wordisms.org
+Delivered-To: study@pixcede.com
+Received: from ey-out-2122.google.com (ey-out-2122.google.com [74.125.78.25])
+	by pixcede (Postfix) with ESMTP id C858830256
+	for <study@wordisms.org>; Sun, 16 Nov 2008 22:24:14 +0000 (UTC)
+Received: by ey-out-2122.google.com with SMTP id 6so798394eyi.23
+        for <study@wordisms.org>; Sun, 16 Nov 2008 14:24:13 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=gamma;
+        h=domainkey-signature:received:received:message-id:date:from:to
+         :subject:mime-version:content-type;
+        bh=ItySrSK8I/ntnHtVLLQ8p4DOBs80C1Jj9wsgirTdp4Q=;
+        b=iXXgq2o/R/39SOLR9dbM9JgNPw1KOwgLuYKQLTJBbqOInb3fNZUse+tgzQuDoqlsgX
+         qEvs1WDb15bnIyVDqDTRC1GVcKimoRGzZgwnhOdnPDATrhLf2Pi0aHecvzHzFR50ASo0
+         jWY/AscNAFkvIxntL7ufCl68MmXPXYnUqetKA=
+DomainKey-Signature: a=rsa-sha1; c=nofws;
+        d=gmail.com; s=gamma;
+        h=message-id:date:from:to:subject:mime-version:content-type;
+        b=Ke4u/KDz6dhE2PzlAIhG8tH7KSTIZ5x6v5jYprh685JvY/U/6I0aVKwXi4Rb152MGV
+         61TkPA8hENGjUvA0u1AaSD88gtBpkJlAlTsF/+iIrA2wkk+rCgFVjF3+4j9zjmREC8yY
+         DtxN3s9fHLlTyuf0O1J0RtjLI0Yd21d37yCWQ=
+Received: by 10.210.25.19 with SMTP id 19mr3343857eby.114.1226874253833;
+        Sun, 16 Nov 2008 14:24:13 -0800 (PST)
+Received: by 10.210.120.19 with HTTP; Sun, 16 Nov 2008 14:24:13 -0800 (PST)
+Message-ID: <eebc5cb00811161424j2b4606e8w7a5c965c39c45199@mail.gmail.com>
+Date: Sun, 16 Nov 2008 14:24:13 -0800
+From: "Adam Derewecki" <derewecki@gmail.com>
+To: study@wordisms.org
+Subject: test
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_25645_7619884.1226874253836"
+
+------=_Part_25645_7619884.1226874253836
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+
+
+------=_Part_25645_7619884.1226874253836
+Content-Type: text/html; charset=ISO-8859-1
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+<br>
+
+------=_Part_25645_7619884.1226874253836--

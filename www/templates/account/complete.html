@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% if form.errors %}
+<p>Your username and password didn't match. Please try again.</p>
+{% endif %}
+
+<div style="text-align: center;">
+The interface has been linked to your account.<br />
+
+Continue to <a href="/account">Account</a>
+</div>
+
+{% endblock %}

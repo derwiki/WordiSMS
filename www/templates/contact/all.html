@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}list all users{% endblock %}
+{% block content %}
+
+<h2>statistics for all users</h2>
+
+<table>
+    <tr>
+        <td>id</td>
+        <td>address</td>
+        <td>date joined</td>
+        <td>token</td>
+        <td>stats</td>
+    </tr>           
+    {% for contact in contacts %}
+    <tr>
+        <td><a href="/contact/report/{{ contact.id }}">{{ contact.id }}</a></td>
+        <td>{{ contact.address }}</td>
+        <td>{{ contact.date_created }}</td>
+        <td>{{ contact.token }}</td>
+        <td>{{ contact.get_stats }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

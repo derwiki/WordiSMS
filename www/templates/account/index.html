@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+{% block title %} Home{% endblock %}
+{% block javascript %}
+function remove_subscription(id,name)
+{
+    if (confirm("This will remove the wordlist '" + name + "' from your account. Are you sure?"))
+    {
+        document.getElementById('subscription_'+id).submit();
+    }
+    return true;
+}
+function remove_device(id,name)
+{
+    if (confirm("This will remove the device '" + name + "' from your account. Are you sure?"))
+    {
+        document.getElementById('device_'+id).submit();
+    }
+    return true;
+}
+function remove_wordlist(id,name)
+{
+    if (confirm("This will remove the wordlist '" + name + "' from WordiSMS. Are you sure?\n\nThis action cannot be undone!"))
+    {
+        document.getElementById('wordlist_'+id).submit();
+    }
+    return true;
+    }    
+
+{% endblock %}
+{% block content %}
+
+<div style="text-align: center">Account home for {{ user.email}}</div>
+
+{% if contacts %}
+<table class="form_table" align="center" style="margin-top: 20px; margin-bottom: 20px;">
+    <tr>
+        <th colspan="3">Linked Devices</th>
+    </tr>
+    <tr>
+        <th>Contact</th>
+        <th>Stats</th>
+        <th>Unlink</th>
+    </tr>
+    {% for contact in contacts %}
+    <tr>
+        <td><a href="/contact/report/{{ contact.id }}">{{ contact.address }}</a></td>
+        <td>{{ contact.get_stats }}</td>
+        <td>
+            <form action="/account" method="post" id="device_{{contact.id}}">              
+                <input type="hidden" name="contact_id" value="{{contact.id}}">
+                <div style="text-align: center;">
+                    <span style="cursor: pointer;" 
+                          onclick="javascript: return remove_device({{contact.id}},'{{contact.name}}');">[X]
+                    </span>
+                </div>
+            </form>
+        </td>
+    </tr>
+    {% endfor %}
+    <tr><td colspan="3" align="center" style="padding-top: 30px;">
+            {% include "snippets/claim_token.html" %}
+    </td></tr>
+</table>
+<div style="text-align: center;">
+</div>
+{% else %}
+<div style="text-align: center">You don't have any contacts linked to your account.<br/><br/>
+{% include "snippets/claim_token.html" %}
+</div>
+{% endif %}   
+
+<table align="center" style="width: 35%;">
+    <form action="/account" method="post" enctype="multipart/form-data">
+        <tr><th colspan="2" style="text-align: center;">Add New Wordlist</th></tr>
+        <tr>
+            <td colspan="2">
+                Currently, we only support comma separated value (CSV) documents. 
+                From Excel, click File -&gt Save As and choose "CSV" from the file type dropdown.
+                Words need to be the first column, and definitions the second.
+            </td>
+        </tr>
+        {{file_upload_form.as_table}}
+        <tr><td></td><td><input type="submit" value="Add Wordlist >>"></td></tr>
+    </form>
+</table>
+
+<table class="form_table" align="center" style="margin-top: 20px; margin-bottom: 20px;">
+    <tr>
+        <th colspan="3">Wordlist Subscriptions</th>
+    </tr>
+    <tr>
+        <th>Word List</th>
+        <th>Unsubscribe</th>
+        <th>Delete</th>
+    </tr>
+{% for subscription in subscriptions %}
+    <tr>
+        <td><a href="/wordlist/{{ subscription.wordlist.id}}/view">{{ subscription.wordlist.name }}</a></td>
+        <td>
+            <form action="/account" method="post" id="subscription_{{subscription.id}}">
+                <input type="hidden" name="subscription_id" value="{{subscription.id}}">
+                <div style="text-align: center;"><span style="cursor: pointer;" onclick="javascript: remove_subscription('{{subscription.id}}','{{subscription.wordlist.name}}');">[X]</span></div>
+            </form>
+        </td>
+        <td>
+            <form action="/account" method="post" id="wordlist_{{subscription.wordlist.id}}">
+                <input type="hidden" name="wordlist_id" value="{{subscription.wordlist.id}}">
+                <div style="text-align: center;"><span style="cursor: pointer;" onclick="javascript: remove_wordlist('{{subscription.wordlist.id}}','{{subscription.wordlist.name}}');">[X]</span></div>
+            </form>
+        </td>
+    </tr>
+{% endfor %}
+    <tr>
+        <td colspan="3" style="text-align: right"><a href="/wordlist/list">Subscribe to new wordlist</a></td>
+    </tr>
+</table>
+{% endblock %}
+

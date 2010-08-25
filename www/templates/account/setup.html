@@ -1,0 +1,25 @@
+{% if errors %}
+Oops! There were some problems
+<ol>
+    {% for error in errors %}
+    <li><strong>{{ error|escape }}</strong></li>
+    {% endfor %}
+</ol>
+{% else %}
+
+Hi {{ contact.address }}! Let's set up your account.
+
+{% endif %}
+                            
+<form method="post" action="/account/setup">
+<table>
+    {{ signup_form.as_table }}
+    
+    <tr><td></td>
+        <td>
+            <input type="hidden" name="contact_id" value="{{contact.id}}">
+            <input type="submit" value="complete >>">
+         </td>
+    </tr>
+</table>
+</form>

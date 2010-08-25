@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Wordlist '{{wordlist.name}}'{% endblock %}
+{% block content %}
+
+<table class="form_table" align="center" style="margin-top: 20px; margin-bottom: 20px;">
+    <tr>
+        <td colspan="2" style="font-size: 22px; text-align: center;">{{wordlist.name}} ({{object_list.count}} total)</td>
+    </tr>
+    <tr style="text-align: left">
+        <th><strong>Word</strong></th>
+        <th><strong>Definition</strong></th>
+    </tr>
+    {% for entry in object_list %}
+    <tr>
+        <td>{{ entry.word }}</td>
+        <td>{{ entry.definition }}</td>
+    </tr>
+    {% endfor %}
+</table>
+<div style="text-align: center;">
+</div>
+
+{% endblock %}

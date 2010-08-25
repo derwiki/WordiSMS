@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}Mobile Test Preparation{% endblock %}
+{% block content %}
+
+  <style type="text/css">
+    div#intro {
+      margin: 0 auto;
+      width: 640px;
+    }
+
+    h2 {
+      padding-bottom: 1em;
+//      border-bottom: 1px solid #000;
+    }
+
+    p {
+      padding: 0.3em 0;
+    }
+  </style>
+</head>
+
+<div id="intro">
+  <p>WordiSMS is a new way to prepare for standardized tests: on-the-go! Now you can utilize the gaps of time between your daily activities to study using your mobile device. Gain a competitive advantage with WordiSMS!</p>
+
+  <p>Simply send a text message from your mobile phone containing the text <strong>signup</strong> to <strong><a href="mailto:study@wordisms.org">study@wordisms.org</a></strong>. You'll be sent a text message with a definition and a list of possible words that correspond to that definition. Respond with the number denoting the word you believe is correct.</p>
+
+  <p style="text-align: center;"><a href="mailto:derewecki@gmail.com">Send us questions, feedback, or general information</a></p>
+</div>
+
+<div style="text-align: center;">
+    {% include "snippets/claim_token.html" %}
+    <br /><br />
+    Already have a device linked and you want to use the web interface?<br />
+    <a href="/account/signup">Signup</a> today!
+</div>
+{% endblock %}

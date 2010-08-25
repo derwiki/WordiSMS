@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% if errors %}
+Oops! There were some problems
+<ol>
+    {% for error in errors %}
+    <li><strong>{{ error|escape }}</strong></li>
+    {% endfor %}
+</ol>
+{% else %}
+{% endif %}
+                            
+<form method="post" action="/account/signup">
+<table>
+    {% with signup_form as form %}
+        {% include "snippets/form_fields.html" %}
+    {% endwith %}
+    
+    <tr><td></td>
+        <td>
+            <input type="hidden" name="contact_id" value="{{contact.id}}">
+            <input type="submit" value="complete >>">
+         </td>
+    </tr>
+</table>
+</form>
+{% endblock %}
